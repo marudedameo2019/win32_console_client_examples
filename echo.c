@@ -8,7 +8,6 @@ int main(void) {
     CHAR ch;
     DWORD dwRead = 1;
     DWORD dwWritten;
-    BOOL bResult;
     while (ReadFile(hStdIn, &ch, 1, &dwRead, NULL) && dwRead != 0) {
         WriteFile(hStdOut, &ch, dwRead, &dwWritten, NULL);
         if (dwRead != dwWritten) break;

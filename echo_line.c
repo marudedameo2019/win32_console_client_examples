@@ -90,7 +90,7 @@ BOOL WriteHex(HANDLE h, CHAR* s, DWORD dwLen) {
             *p++ = '\r';
             *p++ = '\n';
             DWORD dwWritten = 0;
-            WriteFile(h, line, p - line, &dwWritten, NULL);
+            WriteFile(h, line, (DWORD)(p - line), &dwWritten, NULL);
             if (p - line != dwWritten) return FALSE;
             p = line;
         }
