@@ -1,0 +1,2 @@
+# win32_console_client_examples
+Win32APIを使ったコンソールクライアントアプリの例
