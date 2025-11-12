@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.10)
+project(win32_console_client_examples C)
+
+if(MSVC)
+    add_compile_options(/source-charset:utf-8)
+    add_compile_options(/execution-charset:.932)
+else()
+    add_compile_options(-fexec-charset=CP932)
+endif()
+
+add_executable(echo              echo.c)
+add_executable(echo_line         echo_line.c)
+add_executable(terminal_codepage terminal_codepage.c)
+add_executable(direct_console    direct_console.c)
+add_executable(isatty            isatty.c)
